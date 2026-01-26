@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Masters Summer Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="hero">
+
+        <button class="menu-toggle">☰</button>
+
+        <!--Nav (side menu) -->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects &#8609; </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="websiteDesigns.html">Website Designs</a></li>
+
+                        <li><a href="videoDesigns.html">Video Projects</a></li>
+
+                        <li><a href="3dModelling.html">Graphic Design</a></li>
+
+                        <li><a href="3dModelling.html">3D Modelling</a></li>
+
+                        <li><a href="masterProject.html">Masters Summer Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+                <li><a href="cv.pdf" target="_blank">My CV PDF</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sideMenu = document.querySelector('.side-menu');
+
+            menuToggle.addEventListener('click', () => {
+                sideMenu.classList.toggle('open');
+            });
+
+            // Dropdown toggle
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    parent.classList.toggle('open');
+                });
+            });
+        </script>
+        <!--remember to put this in a seperate JS file later-->
+
+
+        <main class="project-page">
+
+            <!--The background circles -->
+            <div class="bg-circle circle-blue"></div>
+            <div class="bg-circle circle-pink"></div>
+            <div class="bg-circle circle-purple"></div>
+            <div class="bg-circle circle-dark"></div>
+
+
+            <section class="project-intro">
+                <div class="project-intro-card glass">
+
+                    <h1>Master Summer Project</h1>
+                    <div class="project-tabs">
+                    </div>
+
+                    <!--Tab section -->
+                    <div class="tab-content active">
+                        <p>
+                            <strong>MUSA = 'Museums For All"</strong> is a mobile-first platform built for and with the
+                            Deaf community, featuring Irish Sign Language (ISL) videos, interactive 3D artifacts, and
+                            playful learning tools to make art and culture accessible and engaging.
+                        <p>
+
+                            The platform allows users to scan QR codes at specific objects and artifacts around the
+                            museum, and access ISL tour videos and other content specifically tailored to Deaf visitors,
+                            allowing museum visitors who may not have otherwise been able to access a live guided tour
+                            to experience the same informational and story-based content.
+                        </p>
+
+                        <p>
+                            <strong>The Idea-</strong> MUSA began as a student project by five MSc students at Trinity
+                            College Dublin, all of whom share a love of art and a passion for accessible design. The
+                            concept was motivated by a desire to tackle the significant barriers that Ireland's deaf
+                            community faces while accessing museums and other cultural sites. Although ISL is the
+                            country's third official language, many institutions still lack ISL content or tours. While
+                            some larger Dublin institutions offer occasional ISL interpretation, these tours are too
+                            infrequent to provide equitable access for many Deaf and hard-of-hearing visitors. To
+                            address these geographic and resource inequalities, we aimed to develop a scalable solution:
+                            ISL video tours for Irish museums.
+                        </p>
+
+                        <p>
+                            <strong>My Role-</strong> As the project manager for my Masters summer project, I was
+                            responsible for coordinating the team, guiding the project direction, and ensuring clear
+                            communication throughout the development process. I was also the only team member with
+                            knowledge of Irish Sign Language and personal experience of discrimination when accessing
+                            museum spaces, which gave me a unique and valuable perspective. Drawing from these lived
+                            experiences, I proposed and pitched an inclusive project concept to both my team and the
+                            wider class, advocating for accessibility-focused design and ensuring that underrepresented
+                            voices were meaningfully considered from the earliest stages of the project.
+                        </p>
+                    </div>
+
+            </section>
+            <section class="project-figma-link">
+                <div class="figma-btn-container glass">
+                    <a href="https://www.musawebapp.com/" target="_blank" class="edu-btn">
+                        <i class="fa fa-search"></i> https://www.musawebapp.com
+                    </a>
+                </div>
+            </section>
+
+            <div class="tab-right">
+                <div class="pitch-embed">
+                    <iframe src="masters/robynsProjectPitch.pdf" width="100%" height="500" loading="lazy"
+                        style="border: none; border-radius: 12px;">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="tab-dividers">
+                ------------------------------------------------------------------------------------------
+                -----------------------------------------------------------------------------------------------
+            </div>
+
+            <div class="collaboration-title">
+                <h2>The Hunt Museum x Musa Collaboration</h2>
+            </div>
+
+            <section class="project-mockups">
+                <div class="mockup-card glass">
+                    <img src="masters/musa2.png" alt="Musa Mockups">
+                </div>
+                <div class="mockup-card glass">
+                    <img src="masters/musa1.png" alt="Musa Mockups">
+                </div>
+                <div class="mockup-card glass">
+                    <img src="masters/musa3.png" alt="Musa Mockup">
+                </div>
+            </section>
+
+            <section class="project-figma-link">
+                <div class="figma-btn-container glass">
+                    <a href="https://www.musawebapp.com/" target="_blank" class="edu-btn">
+                        <i class="fa fa-search"></i> View Project Figma Link
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <div class="glass-tab dark-tab1">
+                    <div class="tab-pitch">
+                        <h1>Collaboration with the Hunt Museum</h1>
+                        <p>
+                            In order to turn our vision into a reality, we needed to find a strong partner museum. We
+                            reached out to several museums and institutions, but it was clear that The Hunt Museum was a
+                            perfect fit due to its existing dedication to accessibility, working with Inclusive Museums
+                            Ireland. This relationship allowed us to pilot our solution and see if it could truly meet
+                            the needs of the Deaf community. Working with CEO, Teresa Crowley, and Curator of Education
+                            and Outreach, Maria Cagney, we outlined the project parameters and identified potential
+                            “hero objects” that would form the core of the first ISL tour.
+                        </p>
+                    </div>
+            </section>
+
+            <div class="tab-dividers">
+                ------------------------------------------------------------------------------------------
+                -----------------------------------------------------------------------------------------------
+            </div>
+            <section>
+                <div class="development-title">
+                    <h2>Website Development Process</h2>
+                </div>
+            </section>
+
+            <section>
+                <div class="glass-tab dark-tab1">
+                    <div class="tab-pitch">
+                        <h1>Research & Co-creation</h1>
+
+                        <p>
+                            We knew that to actually serve the Deaf community, our solution had to be co-created with
+                            our users. This meant building meaningful relationships, conducting focus groups, and
+                            sending surveys, instead of relying solely on secondary sources or assumptions. This became
+                            the heart of our research and planning phase. With assistance from Deaf Village Ireland, the
+                            Irish Deaf Society, the Trinity College Deaf Studies Department, and other regional Deaf
+                            associations, we connected with Deaf community members passionate about art, culture, and
+                            history who were eager to participate in developing accessible solutions. From early
+                            conceptualization all the way through our user testing and launch, Deaf community members
+                            were an integral part of the project.
+                        </p>
+                    </div>
+            </section>
+
+            <div class="tab-line">
+                -------------------------------------------------
+            </div>
+
+            <section>
+                <div class="glass-tab dark-tab1">
+                    <div class="tab-pitch">
+                        <h1>Focus Groups</h1>
+
+                        <p>
+                            In our focus groups, we explored lived experiences, recruiting participants from the Deaf
+                            and Hard of Hearing (HOH) community to discuss the barriers they face when visiting museums
+                            and their preferences for accessible digital content. This provided us with key insights on
+                            preferred video length, caption usage, and the need for culturally authentic ISL
+                            interpretation.
+                        </p>
+                    </div>
+            </section>
+
+            <div class="tab-line">
+                -------------------------------------------------
+            </div>
+
+            <section>
+                <div class="glass-tab dark-tab1">
+                    <div class="tab-pitch">
+                        <h1>Participant Feedback</h1>
+
+                        <p>
+                            The feedback we received uncovered an urgent need for a shift in accessibility standards.
+                            Several participants reported that interpreters were usually unavailable or that ISL support
+                            was lacking entirely. A mobile website was seen not only as a helpful supplement but, in
+                            many cases, as a potential alternative to in-person interpreting, particularly if the app
+                            featured animated, expressive human presenters and offered flexibility in how and when
+                            information could be accessed.
+                            <br><br>
+                            These focus-group findings were further reinforced by feedback from our surveys and
+                            interviews with Deaf community leaders and educators, who highlighted the need for ISL
+                            recognition and the persistent accessibility barriers they face.
+                        </p>
+                    </div>
+            </section>
+
+            <div class="tab-line">
+                -------------------------------------------------
+            </div>
+
+            <section>
+                <div class="glass-tab dark-tab1">
+                    <div class="tab-pitch">
+                        <h1>Design & Testing</h1>
+
+                        <p>
+                            After completing our research, we identified three core features essential to the site’s
+                            success: ISL interpretation videos to ensure sign language remains the primary language of
+                            the tour; interactive quiz and puzzle games to make the museum experience more engaging and
+                            social; and 3D artifact models to support visual learning. An important step was working
+                            with a certified Deaf ISL interpreter. Deaf interpreters bring native fluency, cultural
+                            knowledge, and community trust, resulting in translations that are not only accurate but
+                            also culturally appropriate and respectful.
+                            <br><br>
+                            Once the features were designed and implemented, we tested the site’s functionality and
+                            collected user feedback. Participants completed tasks like navigating between pages to help
+                            us evaluate usability. This process was critical for uncovering potential issues before the
+                            site’s final development and launch.
+                        </p>
+                    </div>
+            </section>
+
+            <section class="project-mockups">
+                <div class="mockup-card glass">
+                    <img src="masters/musaISL.jpg" alt="Musa Mockups ISL videos">
+                </div>
+                <div class="mockup-card glass">
+                    <img src="masters/iphoneMusa.jpg" alt="Musa Mockup Iphone">
+                </div>
+                <div class="mockup-card glass">
+                    <img src="masters/musa3D.jpg" alt="Musa Mockup 3d">
+                </div>
+            </section>
+
+            <div class="tab-line">
+                -------------------------------------------------
+            </div>
+
+            <section>
+                <div class="glass-tab dark-tab1">
+                    <div class="tab-pitch">
+                        <h1>The Launch</h1>
+
+                        <p>
+                            The community launch event for MUSA at The Hunt Museum in Limerick on <strong>August 21,
+                                2025</strong>, was a profound success that validated our co-creation process. The
+                            turnout was strong, bringing together Deaf community members, museum staff, and
+                            accessibility advocates. Attendees were especially appreciative that the event was hosted in
+                            Limerick, noting that accessibility events and ISL tours typically concentrate in Dublin,
+                            leaving them with limited access to cultural resources. This demonstrated that MUSA was a
+                            significant step toward geographic equity. Furthermore, community members praised the
+                            quality and authenticity of the ISL content, specifically noting the involvement of the
+                            professional and respected Deaf ISL Interpreter, Lianne Quigley.
+                            <br><br>
+                            This celebration not only validated MUSA's technical functionality but also immediately
+                            inspired questions about future expansion, with attendees eagerly asking, “Which museums
+                            will you add next?” The day successfully marked MUSA's transition from an academic project
+                            to a valued community resource.
+                        </p>
+                    </div>
+            </section>
+
+
+
+            <div class="glass-slideshow-wrapper">
+                <div class="glass-slideshow">
+                    <button class="gallery-btn gallery-prev">&#10094;</button>
+
+                    <img id="collabSlide" src="masters/images/uT.jpg" width="100%" height="100%"
+                        alt="Collaboration image">
+
+                    <button class="gallery-btn gallery-next">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="tab-dividers">
+                ------------------------------------------------------------------------------------------
+                -----------------------------------------------------------------------------------------------
+            </div>
+
+            <section>
+                <div class="development-title">
+                    <h2>Future Developments</h2>
+                </div>
+            </section>
+            <section>
+                <div class="glass-tab dark-tab1">
+                    <div class="tab-pitch">
+                        <h1>What's Next</h1>
+
+                        <p>
+                            What started as a class project quickly spiraled into something much bigger. The
+                            overwhelmingly positive reception and clear demand from the community have solidified our
+                            commitment to expanding MUSA. Our first major goal is to transform the current mobile-first
+                            website into a native mobile app format, which will allow for a smoother, more integrated
+                            user experience.
+                            <br><br>
+                            Concurrently, we are focused on expansion: we plan to initiate partnership
+                            discussions with additional institutions to spread our ISL tours across Ireland, aiming to
+                            replicate the MUSA model for museums of different sizes and collections. We are also
+                            exploring opportunities to scale this reproducible model to American museums. As we move
+                            into this next phase of growth and development, we are working with a dedicated mentor from
+                            Trinity’s Women That Wow programme, who is supporting us as we seek funding and develop MUSA
+                            as a sustainable resource.
+
+
+                        </p>
+                    </div>
+            </section>
+
+
+            <section class="project-figma-link">
+                <div class="figma-btn-container glass">
+                    <a href="https://inclusivemuseums.ie/building-an-inclusive-relationship-with-headway-limerick/musa-museums-for-all-bringing-irish-sign-language-to-irish-museums/"
+                        target="_blank" class="edu-btn">
+                        <i class="fa fa-search"></i> View Our Project Blog Post
+                    </a>
+                </div>
+            </section>
+
+            <footer>
+                © Robyn Quigley's Portfolio
+            </footer>
+        </main>
+
+    </section>
+
+    <script>
+        const collabImages = [
+            "masters/images/uT.jpg",
+            "masters/images/userTesting1.JPG",
+            "masters/images/userTesting2.JPG",
+            "masters/images/userTesting3.JPG",
+            "masters/images/pL.jpg",
+            "masters/images/launch1.JPG",
+            "masters/images/launch2.JPG",
+            "masters/images/launch3.JPG",
+            "masters/images/launch4.JPG",
+            "masters/images/launch5.JPG",
+            "masters/images/launch6.JPG",
+            "masters/images/showCase.jpg",
+            "masters/images/sc.JPG",
+            "masters/images/sc1.JPG",
+            "masters/images/sc2.JPG",
+            "masters/images/sc3.JPG",
+            "masters/images/sc4.JPG",
+            "masters/images/sc6.JPG",
+            "masters/images/sc7.JPG",
+            "masters/images/sc8.JPG",
+        ];
+
+        let collabIndex = 0;
+        const collabSlide = document.getElementById("collabSlide");
+
+        document.querySelector(".gallery-next").addEventListener("click", () => {
+            collabIndex = (collabIndex + 1) % collabImages.length;
+            collabSlide.src = collabImages[collabIndex];
+        });
+
+        document.querySelector(".gallery-prev").addEventListener("click", () => {
+            collabIndex = (collabIndex - 1 + collabImages.length) % collabImages.length;
+            collabSlide.src = collabImages[collabIndex];
+        });
+    </script>
+
+</body>
+
+</html>

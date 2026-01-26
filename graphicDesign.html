@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Graphic Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Existing styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="hero">
+
+        <button class="menu-toggle">☰</button>
+
+        <!--Nav (side menu) -->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects &#8609; </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="websiteDesigns.html">Website Designs</a></li>
+
+                        <li><a href="videoDesigns.html">Video Projects</a></li>
+
+                        <li><a href="graphicDesign.html">Graphic Design</a></li>
+
+                        <li><a href="3dModelling.html">3D Modelling</a></li>
+
+                        <li><a href="masterProject.html">Masters Summer Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+                <li><a href="cv.pdf" target="_blank">My CV PDF</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sideMenu = document.querySelector('.side-menu');
+
+            menuToggle.addEventListener('click', () => {
+                sideMenu.classList.toggle('open');
+            });
+
+            // Dropdown toggle
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    parent.classList.toggle('open');
+                });
+            });
+        </script>
+        <!--remember to put this in a seperate JS file later-->
+        <script>
+            let socialIndex = 0;
+
+            function moveSocialSlide(direction) {
+                const track = document.querySelector('.social-track');
+                const videos = document.querySelectorAll('.social-track video');
+                const videoWidth = videos[0].offsetWidth + 30;
+
+                socialIndex += direction;
+
+                if (socialIndex < 0) socialIndex = 0;
+                if (socialIndex > videos.length - 1) socialIndex = videos.length - 1;
+
+                track.style.transform = `translateX(-${socialIndex * videoWidth}px)`;
+
+                // Pause all videos when sliding
+                videos.forEach(video => video.pause());
+            }
+        </script>
+
+
+        <main class="project-page">
+
+            <!-- Background circles -->
+            <div class="bg-circle circle-blue"></div>
+            <div class="bg-circle circle-pink"></div>
+            <div class="bg-circle circle-purple"></div>
+            <div class="bg-circle circle-dark"></div>
+
+            <section class="video-projects">
+
+                <!-- Intro tab -->
+                <div class="glass-tab light-tab">
+                    <h1>Graphic Design</h1>
+                    <p>
+                        I have developed strong graphic design skills through extensive hands-on experience using
+                        <strong>Adobe Illustrator, Photoshop, and InDesign</strong>, which I use as my primary design
+                        tools for both academic and personal projects. My design approach is grounded in visual
+                        storytelling, where careful attention is given to composition, hierarchy, color, and typography
+                        to ensure each piece communicates its intended message clearly and effectively to the audience.
+                        I also place a strong emphasis on conceptual thinking, experimenting with shapes, textures, and
+                        layering to create depth and visual interest, often drawing inspiration from branding,
+                        editorial, and contemporary illustration styles.
+                        <br><br>
+                        <strong>Design</strong> has always been a significant influence on my creative process, shaping
+                        how I approach problem-solving, concept development, and layout decisions. While I recognise
+                        that there is still much to learn, I am highly motivated to continue developing my skills,
+                        experimenting with new techniques, and refining my creative thinking when it comes to visual
+                        communication. I am eager to grow as a designer and constantly challenge myself to improve,
+                        using each project as a new opportunity to become more confident, inventive, and technically
+                        proficient.
+                    </p>
+                </div>
+
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Basketball Poster</h1>
+                        <h3>illustrator</h3>
+                        <p>
+                            This poster was created in Adobe Illustrator using a modern cartoon approach, building the
+                            design entirely from shapes. I focused on bold colors, exaggerated forms, and dynamic
+                            composition to capture the energy and fun of basketball. The project allowed me to
+                            experiment with vector-based illustration while exploring stylization, visual hierarchy, and
+                            movement. The final design combines playful cartoon aesthetics with a sense of motion,
+                            creating an engaging and contemporary take on the sport.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider">--------------------</div>
+
+                    <div class="tab-right">
+                        <img src="posters/Basketball poster.jpg" alt="Basketball">
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Killiney Wine Poster</h1>
+                        <h3>illustrator</h3>
+                        <p>
+                            This poster was created for the Killiney Golf Club event, Taste of Killiney, using Adobe
+                            Illustrator. The bottle and wine elements were designed entirely from shapes, while the
+                            fruit was generated with AI to add visual interest. The color palette and overall design
+                            align with the Killiney Golf Club's branding, ensuring a cohesive and professional look.
+                            Informational bubbles were incorporated to present event details clearly and hierarchically,
+                            guiding the viewer's eye while maintaining a visually engaging layout. This project allowed
+                            me to combine vector illustration, AI-generated elements, and brand-focused design in a
+                            cohesive composition.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider">--------------------</div>
+
+                    <div class="tab-right">
+                        <div>
+                            <img src="posters/Killiney wine poster.png" alt="Wine graphic poster">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Album Vinly Cover</h1>
+                        <h3>Photoshop, Indesign & illustrator</h3>
+                        <p>
+                            This album cover was created for a four-member band, incorporating the album title (Design
+                            House), a hidden element, and all band members. The base layer features a duplicated image
+                            of Earth with a swirl effect, creating depth and movement, while three blindfolded members
+                            are positioned on the left and the fourth integrated seamlessly using color balance and
+                            filters.
+                            <br><br>
+                            Skeletons were added to symbolize Design House as a “never-ending music piece,” representing
+                            the enduring and cyclical nature of music and creativity. This adds a conceptual layer that
+                            complements the visual narrative.
+                            <br><br>
+                            The album title uses inflated 3D typography, and the hidden element—a teddy beside the
+                            title—is actually the letters “D & H” rotated horizontally. Overall, the design combines
+                            layering, blending, and storytelling to create a cohesive and imaginative album cover.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider"></div>
+
+                    <div class="tab-right">
+                        <div class="video-slideshow" data-project="album">
+                            <button class="slide-btn prev-album">&#10094;</button>
+                            <img class="slide-image" src="posters/IMG_9984.jpg" alt="Album Vinyl cover">
+                            <button class="slide-btn next-album">&#10095;</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Movie Poster</h1>
+                        <h3>Photoshop</h3>
+                        <p>
+                            This poster depicts a young boy in silhouette walking into the distance, with a dramatic
+                            sunset behind him, while above, a soldier holding a gun gazes into the horizon. Flying jets
+                            are layered subtly across the composition, and event details are displayed at the bottom to
+                            indicate the movie's release. The design is inspired by the Saving Private Ryan poster and
+                            explores themes of the American Dream during the Vietnam War.
+                            <br><br>
+
+                            For this assignment, only one AI-generated element was allowed, so I added a bag on the
+                            boy's right hand. The original image did not include a bag, so I used AI to generate it in
+                            the selected area, integrating it seamlessly with the figure.
+                            <br><br>
+                            The poster combines silhouette, layering, and subtle AI manipulation to create a cinematic,
+                            evocative image. By balancing visual storytelling with historical and thematic references,
+                            it communicates both mood and narrative while maintaining a cohesive and engaging
+                            composition.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider">--------------------</div>
+
+                    <div class="tab-right">
+                        <img src="posters/moviePoster.jpg" alt="Movie Poster">
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Movie Poster</h1>
+                        <h3>Photoshop</h3>
+                        <p>
+                            This poster is an experimental integration of Andy's bedroom from Toy Story and Mike
+                            Wazowski from Monsters, Inc. Created as a personal project for fun, the piece explores 3D
+                            objects, shadows, dimension, and colour. While the placement and shadow of Mike Wazowski
+                            could be improved, the project allowed me to experiment freely with composition, lighting,
+                            and visual layering.
+                            <br><br>
+                            As of now the poster remains unfinished, but it reflects a playful approach to creative
+                            experimentation. Demonstrating exploration of techniques and visual storytelling in a
+                            3D-inspired environment.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider">--------------------</div>
+
+                    <div class="tab-right">
+                        <img src="posters/Toystoryposter.jpg" alt="Movie Poster">
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Logo Design Graphic</h1>
+                        <h3>illustrator</h3>
+                        <p>
+                            This logo was created for O'Brien Wines as part of a UCD assignment, integrating a wine
+                            bottle (middle section), wine glass(on the right), and spirit bottle (on the left) into a
+                            single cohesive design. The wine glass and
+                            spirit bottle were designed separately, then carefully subtracted from the sides of the wine
+                            bottle to create a unified composition.
+                            <br><br>
+                            The final design aligns with O'Brien Wines' branding guidelines, using a colour palette
+                            consistent with their identity. The project allowed me to explore vector-based construction,
+                            precise layering, and creative integration of multiple elements, resulting in a clean and
+                            visually appealing logo.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider">--------------------</div>
+
+                    <div class="tab-right">
+                        <img src="posters/O'Briens Logo Design.png" alt="Movie Poster">
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Logo Design Video</h1>
+                        <h3>Indesign</h3>
+                        <p>
+                            This interactive branding brochure for O'Brien's was created in InDesign, incorporating
+                            key annimation effects, text timing, image tracking, Google maps implementation, video
+                            integration, and other interactive elements. The project itself highlights O'Brien's history
+                            and business, combining
+                            multimedia elements to create an engaging, dynamic presentation.
+                            <br><br>
+                            Creating this brochure allowed me to explore advanced InDesign features, integrating text,
+                            visuals,
+                            and video in a cohesive layout while maintaining brand consistency. This project
+                            demonstrates both technical skill and creative storytelling in a professional branding
+                            context.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider"></div>
+
+                    <div class="tab-right">
+                        <a href="https://indd.adobe.com/view/cf882f6d-70d0-4f6b-986d-04117af0d086" target="_blank"
+                            class="video-cover">
+
+                            <img src="posters/o'brien cover page.png" alt="Video project cover">
+
+                            <div class="play-btn1">▶</div>
+                        </a>
+
+                        </a>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <footer>
+                © Robyn Quigley's Portfolio
+            </footer>
+
+        </main>
+
+        <script>
+            const slideshows = {
+                album: ["posters/IMG_9984.jpg", "posters/IMG_9985.jpg"]
+            };
+
+            document.querySelectorAll(".video-slideshow").forEach(slideshow => {
+                const project = slideshow.dataset.project;
+                const img = slideshow.querySelector(".slide-image");
+                let index = 0;
+
+                // Use the new button classes
+                slideshow.querySelector(".next-album").addEventListener("click", () => {
+                    index = (index + 1) % slideshows[project].length;
+                    img.src = slideshows[project][index];
+                });
+
+                slideshow.querySelector(".prev-album").addEventListener("click", () => {
+                    index = (index - 1 + slideshows[project].length) % slideshows[project].length;
+                    img.src = slideshows[project][index];
+                });
+            });
+
+
+        </script>
+
+
+</body>
+
+</html>

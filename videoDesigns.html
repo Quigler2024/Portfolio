@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="hero">
+
+        <button class="menu-toggle">☰</button>
+
+        <!--Nav-->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects &#8609; </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="websiteDesigns.html">Website Designs</a></li>
+
+                        <li><a href="videoDesigns.html">Video Projects</a></li>
+
+                        <li><a href="graphicDesign.html">Graphic Design</a></li>
+
+                        <li><a href="3dModelling.html">3D Modelling</a></li>
+
+                        <li><a href="masterProject.html">Masters Summer Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+                <li><a href="cv.pdf" target="_blank">My CV PDF</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sideMenu = document.querySelector('.side-menu');
+
+            menuToggle.addEventListener('click', () => {
+                sideMenu.classList.toggle('open');
+            });
+
+            // Dropdown toggle
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    parent.classList.toggle('open');
+                });
+            });
+        </script>
+        <!--remember to put this in a seperate JS file later-->
+        <script>
+            let socialIndex = 0;
+
+            function moveSocialSlide(direction) {
+                const track = document.querySelector('.social-track');
+                const videos = document.querySelectorAll('.social-track video');
+                const videoWidth = videos[0].offsetWidth + 30;
+
+                socialIndex += direction;
+
+                if (socialIndex < 0) socialIndex = 0;
+                if (socialIndex > videos.length - 1) socialIndex = videos.length - 1;
+
+                track.style.transform = `translateX(-${socialIndex * videoWidth}px)`;
+
+                // Pause all videos when sliding
+                videos.forEach(video => video.pause());
+            }
+        </script>
+
+
+        <main class="project-page">
+
+            <!-- Background circles -->
+            <div class="bg-circle circle-blue"></div>
+            <div class="bg-circle circle-pink"></div>
+            <div class="bg-circle circle-purple"></div>
+            <div class="bg-circle circle-dark"></div>
+
+            <section class="video-projects">
+
+                <!-- Intro tab -->
+                <div class="glass-tab light-tab">
+                    <h1>Video Projects</h1>
+                    <p>
+                        I have developed strong video editing skills through extensive hands-on experience using
+                        <strong>Adobe Premiere Pro</strong>, which I use as my primary editing software for both
+                        academic and personal projects. My editing approach is grounded in narrative storytelling, where
+                        careful attention is given to pacing, structure, and visual information to ensure each video
+                        communicates its message clearly and effectively to the audience. I also place a strong emphasis
+                        on sound design,working with dialogue, music, and ambient audio to create balance and enhance
+                        emotional impact,
+                        often drawing inspiration from other movies and cinematic audio techniques.
+                    </p>
+                    <br>
+                    <p> <strong>Film</strong> always been a significant influence on my creative process, shaping how I
+                        cut scenes,
+                        build
+                        tension, and guide the viewer’s focus through intentional sequencing and timing. While I
+                        recognise that there is still a lot for me to learn, I am highly motivated to continue
+                        developing my skills, experimenting with new techniques, and refining my creative thinking when
+                        it comes to moving images. I am eager to grow as an editor and constantly challenge myself to
+                        improve, using each project as a new opportunity to become more confident and technically
+                        proficient.
+                    </p>
+                </div>
+
+                <!-- DCU -->
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>DCU</h1>
+                        <h3>Short Film Project</h3>
+                        <p>
+                            "Seen Not Heard" is a short film project I created that highlights the challenges deaf
+                            students faced during the pandemic due to the widespread use of masks. The film sheds light
+                            on the barriers deaf individuals encounter daily and how they navigate a hearing world. With
+                            the implementation of COVID-19 masks, an additional challenge arises: lip-reading others
+                            becomes even more difficult.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider"></div>
+
+                    <div class="tab-right">
+                        <video controls>
+                            <source src="dcu/seenNotHeard.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- TCD (slideshow) -->
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>TCD</h1>
+                        <h3>Video Production Module</h3>
+                        <p>
+                            <strong>Video Clip 1 - Favourite Movie</strong>
+                            <br><br>
+                            This one-minute video was created as part of a group assignment exploring visual
+                            storytelling through personal narrative. Working in a group of fifteen, we filmed short
+                            interviews with participants discussing their favourite movies and why they resonated with
+                            them. I chose to focus on one participant whose vivid visual descriptions allowed for
+                            stronger storytelling. This approach enabled me to incorporate third-party material and
+                            audio to enhance the overall narrative and emotional impact.
+                            <br><br>
+                            <strong>Video Clip 2 - Short Film Project</strong><br><br>
+
+                            This short film follows a student who is rejected from Trinity College, with the decision
+                            tied to deeper personal issues relating to his father. As he struggles to understand the
+                            rejection, the story explores themes of pressure, identity, and emotional conflict. The
+                            character becomes increasingly consumed by the need for answers, leading him to take matters
+                            into his own hands. The film uses pacing, sound, and visual tension to reflect his gradual
+                            loss of control and internal turmoil.
+
+
+                        </p>
+                    </div>
+
+                    <div class="tab-divider"></div>
+
+                    <div class="tab-right">
+                        <div class="video-slideshow" data-project="tcd">
+                            <button class="slide-btn prev">&#10094;</button>
+                            <video controls>
+                                <source src="tcd/movingImageAssignment1_RobynQuigley_23364587.mp4" type="video/mp4">
+                            </video>
+                            <button class="slide-btn next">&#10095;</button>
+                        </div>
+                        <p> Video 1/2 </p>
+                    </div>
+                </div>
+
+                <!-- Personal (slideshow) -->
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Personal</h1>
+                        <h3>Personal Video Work</h3>
+                        <p>
+                            <strong>Video Clip 1 – Belgium Trip Montage</strong>
+                            <br><br>
+
+                            This video is a three-minute montage capturing my travels through Belgium, highlighting
+                            cities
+                            such as Ghent, Bruges, and Dinant. The video combines scenic shots, landmarks, and personal
+                            experiences to convey the journey and atmosphere of each location. By sequencing the clips
+                            with music and transitions, I aimed to create a sense of exploration and immersion through
+                            sharing
+                            my personal perspective of the trip.
+                            <br><br>
+                            <strong>Video Clip 2 – Human Eye Explanation</strong>
+                            <br><br>
+
+                            This was my first ever personal video project, focusing on the repetition and experience of
+                            what our eyes capture. While the video was a learning experience and not as polished as I
+                            would make
+                            it now, it allowed me to experiment with explanatory storytelling, visuals, and pacing.
+                            Reflecting on it, I recognise ways I could improve the editing and clarity, but it remains
+                            an important milestone as my first attempt at creating a personal video.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider"></div>
+
+                    <div class="tab-right">
+                        <div class="video-slideshow" data-project="personal">
+                            <button class="slide-btn prev">&#10094;</button>
+                            <video controls>
+                                <source src="personal/belgium.MOV" type="video/mp4">
+                            </video>
+                            <button class="slide-btn next">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="social-media-section">
+
+                <div class="glass social-title">
+                    <h2>Social Media Videos</h2>
+
+                    <p>
+                        I have also created social media video content using both <strong>Adobe Premiere Pro</strong>
+                        and <strong>CapCut</strong>,
+                        adapting my editing style to suit fast-paced, platform-specific formats. These personal/academic
+                        projects required concise informative narration, strong visual hooks, and an understanding of
+                        how pacing and timing impact viewer engagement across platforms. Through this work, I gained
+                        experience editing for quick pace, vertical, and horizontal content, ensuring videos remained
+                        visually engaging while simultaneously communicating the message through a limited timeframe.
+                    </p>
+                </div>
+
+                <div class="social-slider glass">
+
+                    <button class="social-btn prev" onclick="moveSocialSlide(-1)">&#10094;</button>
+
+                    <div class="social-track">
+                        <video controls>
+                            <source src="socialMedia/social.mov" type="video/mp4">
+                        </video>
+
+                        <video controls>
+                            <source src="socialmedia/meettheteam.mov" type="video/mp4">
+                        </video>
+
+                        <video controls>
+                            <source src="socialMedia/social3.MOV" type="video/mp4">
+                        </video>
+
+                        <video controls>
+                            <source src="SocialMedia/social4.MOV" type="video/mp4">
+                        </video>
+
+                        <video controls>
+                            <source src="socialMedia/social5.MP4" type="video/mp4">
+                        </video>
+                        <video controls>
+                            <source src="socialMedia/social6.MP4" type="video/mp4">
+                        </video>
+                        <video controls>
+                            <source src="socialMedia/social77.mov" type="video/mp4">
+                        </video>
+
+                        <p>More coming <strong>soon......</strong>.</p>
+                    </div>
+
+                    <button class="social-btn next" onclick="moveSocialSlide(1)">&#10095;</button>
+
+                </div>
+            </section>
+
+            <footer>
+                © Robyn Quigley's Portfolio
+            </footer>
+
+        </main>
+
+        <script>
+            const slideshows = {
+                tcd: ["movingImageAssignment1_RobynQuigley_23364587.mp4", "shortFilm.mp4"],
+                personal: ["belgium.MOV", "video2.mp4"]
+            };
+
+            document.querySelectorAll(".video-slideshow").forEach(slideshow => {
+                const project = slideshow.dataset.project;
+                const video = slideshow.querySelector("video");
+                const source = video.querySelector("source");
+                let index = 0;
+
+                slideshow.querySelector(".next").addEventListener("click", () => {
+                    index = (index + 1) % slideshows[project].length;
+                    source.src = `${project}/${slideshows[project][index]}`;
+                    video.load();
+                });
+
+                slideshow.querySelector(".prev").addEventListener("click", () => {
+                    index = (index - 1 + slideshows[project].length) % slideshows[project].length;
+                    source.src = `${project}/${slideshows[project][index]}`;
+                    video.load();
+                });
+            });
+        </script>
+
+
+</body>
+
+</html>

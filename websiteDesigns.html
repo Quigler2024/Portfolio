@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Website Designs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="hero">
+
+        <button class="menu-toggle">☰</button>
+
+        <!--Nav (side menu) -->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects &#8609; </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="websiteDesigns.html">Website Designs</a></li>
+
+                        <li><a href="videoDesigns.html">Video Projects</a></li>
+
+                        <li><a href="3dModelling.html">Graphic Design</a></li>
+
+                        <li><a href="3dModelling.html">3D Modelling</a></li>
+
+                        <li><a href="masterProject.html">Masters Summer Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+                <li><a href="cv.pdf" target="_blank">My CV PDF</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sideMenu = document.querySelector('.side-menu');
+
+            menuToggle.addEventListener('click', () => {
+                sideMenu.classList.toggle('open');
+            });
+
+            // Dropdown toggle
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    parent.classList.toggle('open');
+                });
+            });
+        </script>
+        <!--remember to put this in a seperate JS file later-->
+
+
+        <main class="project-page">
+
+            <!--The background circles -->
+            <div class="bg-circle circle-blue"></div>
+            <div class="bg-circle circle-pink"></div>
+            <div class="bg-circle circle-purple"></div>
+            <div class="bg-circle circle-dark"></div>
+
+
+            <section class="project-intro">
+                <div class="project-intro-card glass">
+
+                    <h1>Website Designs</h1>
+
+                    <!--Tab buttons -->
+                    <div class="project-tabs">
+                        <button class="tab-btn active" data-tab="trinity">
+                            Trinity Through Time
+                        </button>
+                        <button class="tab-btn" data-tab="enroute">
+                            Enroute
+                        </button>
+                    </div>
+
+                    <!--Tab section -->
+                    <div class="tab-content active" id="trinity">
+                        <p>
+                            <strong>Trinity Through Time</strong> is an interactive website designed to inform students
+                            about
+                            the history of Trinity’s campus in a way that has not been previously explored. The project
+                            showcases the rich architectural and cultural evolution of Trinity’s buildings, highlighting
+                            how
+                            the campus has transformed over time.
+                        </p>
+                        <p>
+                            By combining historical research with engaging visual storytelling, the website makes campus
+                            history accessible, relevant, and compelling for a contemporary student audience.
+                            Ultimately,
+                            the project bridges past and present, allowing users to experience Trinity’s architectural
+                            legacy through an immersive and educational digital experience.
+                        </p>
+                    </div>
+
+                    <div class="tab-content" id="enroute">
+                        <p>
+                            <strong>Enroute</strong> is a travel planning website designed to make organising trips
+                            more stress-free and efficient by tailoring itineraries to individual user preferences.
+                            The platform focuses on different travel styles, such as relaxing or adventure-based
+                            holidays, ensuring that each itinerary aligns with how users want to experience their trip.
+                        </p>
+                        <p>
+                            As a prototype, the website features four popular tourist destinations (Dublin, NYC, Paris &
+                            Tokyo), offering users
+                            both fixed PDF itineraries and the option to create personalised plans based on the number
+                            of travel days. Enroute prioritises clarity and usability, allowing users to plan meaningful
+                            and enjoyable trips that suit their pace, interests, and expectations.
+                        </p>
+
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="project-figma-link">
+                <div class="figma-btn-container glass">
+                    <a id="figmaLink"
+                        href="https://www.figma.com/design/0dG09VsZ9sM5ffAPw9VVHg/Trinity-history-website?node-id=217-564&t=wJNFIg7z1tA67IxT-1"
+                        target="_blank" class="edu-btn">
+                        <i class="fa fa-search"></i> View Project On Figma
+                    </a>
+                </div>
+            </section>
+            <!-- Mockups section -->
+            <section class="project-mockups">
+                <div class="mockup-card glass">
+                    <img src="webMockups/trinity_through_time.png" alt="Mockup 1">
+                </div>
+                <div class="mockup-card glass">
+                    <img src="webMockups/trinity_through_time(2).png" alt="Mockup 2">
+                </div>
+                <div class="mockup-card glass">
+                    <img src="webMockups/trinity_through_time(3).png" alt="Mockup 3">
+                </div>
+            </section>
+
+            <!-- Dark Glass Video Section (only for Enroute) -->
+            <section id="enroute-video" class="project-video dark-glass">
+                <div class="video-container">
+                    <video controls autoplay muted loop>
+                        <source src="webMockups/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <!--project showcase -->
+            <section class="project-showcase">
+                <button class="showcase-arrow" id="prev">&#10094;</button>
+                <div class="showcase-content glass">
+                    <img src="ttt_slideshow/1.jpg" alt="Project feature">
+                </div>
+                <button class="showcase-arrow" id="next">&#10095;</button>
+            </section>
+
+
+            <footer>
+                © Robyn Quigley's Portfolio
+            </footer>
+
+        </main>
+
+
+        <script>
+            const tabButtons = document.querySelectorAll(".tab-btn");
+            const tabContents = document.querySelectorAll(".tab-content");
+            const showcaseImage = document.querySelector(".showcase-content img");
+            const mockupCards = document.querySelectorAll(".project-mockups .mockup-card img");
+            const prevBtn = document.getElementById("prev");
+            const nextBtn = document.getElementById("next");
+
+            let currentImage = 1;
+
+
+            const projects = {
+                trinity: {
+                    figmaLink: "https://www.figma.com/design/0dG09VsZ9sM5ffAPw9VVHg/Trinity-history-website?node-id=217-564&t=wJNFIg7z1tA67IxT-1",
+                    showcase: {
+                        title: "Trinity Through Time",
+                        description: "By: Anvita, Robyn, Karina, Morgan, Sanni & Oscar",
+                        buttonLink: "#"
+                    },
+                    mockups: [
+                        "webMockups/trinity_through_time.png",
+                        "WebMockups/trinity_through_time(2).png",
+                        "webMockups/trinity_through_time(3).png"
+                    ],
+                    slideshow: true,
+                    folder: "ttt_slideshow",
+                    totalImages: 16
+                },
+                enroute: {
+                    figmaLink: "https://www.figma.com/design/zi7dlkYfqPZwx95386nAAa/EnRoute?node-id=0-1&t=etpYmP9JSxy3DwY1-1",
+                    showcase: {
+                        title: "Enroute",
+                        description: "By: Your Team Name",
+                        buttonLink: "#"
+                    },
+                    mockups: [
+                        "webMockups/enroute(1).png",
+                        "webMockups/enroute(2).png",
+                        "webMockups/enroute(3).png"
+                    ],
+                    slideshow: true, // Enable slideshow
+                    folder: "itineraries_Dublin",
+                    totalImages: 16
+                }
+            };
+
+            function updateProject(target) {
+                const project = projects[target];
+
+                const figmaLink = document.getElementById("figmaLink");
+                if (figmaLink && project.figmaLink) {
+                    figmaLink.href = project.figmaLink;
+                }
+
+                currentImage = 1;
+
+
+                showcaseImage.src = `${project.folder}/${currentImage}.jpg`;
+                showcaseImage.alt = `${project.showcase.title} feature ${currentImage}`;
+
+
+                mockupCards.forEach((img, index) => {
+                    if (project.mockups[index]) {
+                        img.src = project.mockups[index];
+                        img.alt = `${project.showcase.title} mockup ${index + 1}`;
+                    }
+                });
+
+                // Update showcase text
+                const showcaseText = document.querySelector(".showcase-text");
+                if (showcaseText) {
+                    showcaseText.querySelector("h2").textContent = project.showcase.title;
+                    showcaseText.querySelector("p").textContent = project.showcase.description;
+                    const link = showcaseText.querySelector("a");
+                    if (link) link.href = project.showcase.buttonLink;
+                }
+            }
+
+            // Tab click handler
+            tabButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const target = button.dataset.tab;
+
+
+                    tabButtons.forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+
+
+                    tabContents.forEach(content => {
+                        content.classList.remove("active");
+                        if (content.id === target) content.classList.add("active");
+                    });
+
+
+                    updateProject(target);
+
+                    // Show/hide Enroute video
+                    const enrouteVideo = document.getElementById("enroute-video");
+                    if (target === "enroute") {
+                        enrouteVideo.style.display = "flex"; // shows video on screen
+                    } else {
+                        enrouteVideo.style.display = "none"; // hides video
+                    }
+                });
+            });
+
+
+            // Slideshow
+            function updateShowcaseSlideshow() {
+                const activeProject = document.querySelector(".tab-btn.active").dataset.tab;
+                const project = projects[activeProject];
+
+                showcaseImage.src = `${project.folder}/${currentImage}.jpg`;
+                showcaseImage.alt = `${project.showcase.title} feature ${currentImage}`;
+            }
+
+
+            nextBtn.addEventListener("click", () => {
+                const activeProject = document.querySelector(".tab-btn.active").dataset.tab;
+                const project = projects[activeProject];
+                if (!project.slideshow) return;
+
+                currentImage++;
+                if (currentImage > project.totalImages) currentImage = 1;
+                updateShowcaseSlideshow();
+            });
+
+
+            prevBtn.addEventListener("click", () => {
+                const activeProject = document.querySelector(".tab-btn.active").dataset.tab;
+                const project = projects[activeProject];
+                if (!project.slideshow) return;
+
+                currentImage--;
+                if (currentImage < 1) currentImage = project.totalImages;
+                updateShowcaseSlideshow();
+            });
+
+
+            const initialTab = document.querySelector(".tab-btn.active")?.dataset.tab || "trinity";
+            updateProject(initialTab);
+        </script>
+
+</body>
+
+</html>

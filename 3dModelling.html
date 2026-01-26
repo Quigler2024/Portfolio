@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Existing styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="hero">
+
+        <button class="menu-toggle">☰</button>
+
+        <!--Nav (side menu) -->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects &#8609; </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="websiteDesigns.html">Website Designs</a></li>
+
+                        <li><a href="videoDesigns.html">Video Projects</a></li>
+
+                        <li><a href="graphicDesign.html">Graphic Design</a></li>
+
+                        <li><a href="3dModelling.html">3D Modelling</a></li>
+
+                        <li><a href="masterProject.html">Masters Summer Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+                <li><a href="cv.pdf" target="_blank">My CV PDF</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sideMenu = document.querySelector('.side-menu');
+
+            menuToggle.addEventListener('click', () => {
+                sideMenu.classList.toggle('open');
+            });
+
+            // Dropdown toggle
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    parent.classList.toggle('open');
+                });
+            });
+        </script>
+        <!--remember to put this in a seperate JS file later-->
+
+        <main class="project-page">
+
+            <!-- Background circles -->
+            <div class="bg-circle circle-blue"></div>
+            <div class="bg-circle circle-pink"></div>
+            <div class="bg-circle circle-purple"></div>
+            <div class="bg-circle circle-dark"></div>
+
+            <section class="video-projects">
+
+                <!--Intro tab -->
+                <div class="glass-tab light-tab modelling-tab">
+                    <h1 class="tab-title">3D Modelling</h1>
+                    <div class="modelling-content">
+                        <div class="modelling-text">
+                            <p>
+                                I have developed strong 3D modelling skills through extensive hands-on experience using
+                                <strong>Blender, Meshroom, and Sketchfab</strong>, which I use as my primary tools for
+                                both academic and personal projects. My approach is grounded in combining technical
+                                precision with creative exploration, carefully considering topology, lighting,
+                                texturing, and rendering to ensure each model communicates its intended form and
+                                function effectively. I also place a strong emphasis on photogrammetry and real-world
+                                reference integration, often using Meshroom to capture accurate environments and
+                                Sketchfab to present interactive, web-ready 3D models for immersive visualisation.
+                            </p>
+                        </div>
+
+                        <div class="modelling-image">
+                            <img src="3d/3dmodel.jpg" alt="3D Modelling Preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab modelling-tab">
+                    <div class="modelling-content">
+                        <div class="modelling-text">
+                            <h3>Object One: Iron</h3>
+                            <br>
+                            <p>
+                                My first 3D modelling project involved creating an iron using 3dx MAX, focusing on basic
+                                geometric construction and the application of spline pipe techniques. I combined a
+                                triangle, rectangle, and spline-based pipe shapes to construct the overall form,
+                                carefully considering proportions, alignment, and curvature to achieve a clean and
+                                realistic silhouette.
+                                <br><br>
+                                This assignment allowed me to understand the fundamentals of 3D modelling, including
+                                mesh
+                                creation, object manipulation, and precise shape integration. It served as an essential
+                                exercise in developing spatial awareness, control over 3dx Max tools, and
+                                understanding how simple geometric forms can be combined to create recognizable,
+                                functional objects.
+                            </p>
+                        </div>
+
+                        <div class="modelling-image">
+                            <img src="3d/iron.png" alt="3D Modelling Preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab modelling-tab">
+                    <div class="modelling-content">
+                        <div class="modelling-text">
+                            <h3>Object Two: Cube / Sphere intersection</h3>
+                            <br>
+                            <p>
+                                This project focused on exploring object intersection and subtraction techniques in
+                                Blender. Using a cube and a sphere, I experimented with Boolean operations to subtract
+                                and combine shapes, learning how different geometries interact in 3D space.
+                                <br><br>
+                                The exercise allowed me to develop a stronger understanding of mesh topology, precise
+                                alignment, and clean geometry, while also improving my skills in manipulating complex
+                                forms. This foundational practice helped reinforce the principles of constructive and
+                                destructive modelling, which are essential for creating more intricate 3D objects.
+                            </p>
+                        </div>
+
+                        <div class="modelling-image">
+                            <img src="3d/cubeIntersection.png" alt="3D Modelling Preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-tab light-tab modelling-tab1">
+                    <h1 class="tab-title">3D Modelling: Room Assignment</h1>
+                    <div class="modelling-content">
+                        <div class="modelling-text">
+                            <p>
+                                This project involved creating a fully realized 3D TV room scene in
+                                <strong>Blender</strong>,
+                                incorporating all required key elements: a transmissive/refractive object (glass), a
+                                highly reflective surface, a bump-mapped/normal-mapped object, a texture-mapped object,
+                                carefully positioned lights and shadows, and a surrounding 3D environment. I carefully
+                                designed and arranged each element to create a cohesive, realistic interior while
+                                balancing visual interest and spatial composition.
+                                <br><br>
+                                The room was also required to have at least five pop culture toy objects made from
+                                scratch, which
+                                were the Pac-Man arcade set, the Pokémon ball, the Nintendo Playboy, the Rubik’s Cube,
+                                the Nintendo Switch, and the teddy bear.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab slideshow-tab">
+
+                    <div class="dark-tab-content">
+
+                        <div class="slideshow-wrapper">
+                            <button class="slide-btn1 prev">❮</button>
+
+                            <div class="slideshow">
+
+                                <div class="slide active">
+                                    <img src="3d/3d_model1.PNG" alt="Clear image of Robyn's 3d tv room">
+                                    <div class="slide-overlay">
+                                        <p>This project allowed me to experiment with advanced 3D techniques such as
+                                            lighting design, material creation, texture mapping, reflections,
+                                            refractions, and environmental composition. It strengthened my ability to
+                                            combine multiple 3D elements into a cohesive, immersive interior, while
+                                            balancing realism and visual storytelling within a controlled scene.</p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model2.jpg" alt="screenshot of the room pre-render">
+                                    <div class="slide-overlay">
+                                        <p>The placement of objects in the scene was carefully considered to create a
+                                            balanced and visually engaging composition.
+                                            <br><br>
+                                            -Larger items, such as the
+                                            Pac-Man arcade set (in the corner of the room) and the Teddy bear(on the
+                                            sofa) were positioned in different parts of the room to anchor the scene and
+                                            establish realistic scale.
+                                            <br><br>
+                                            -Mid-sized objects, like the Nintendo Switch and
+                                            Pokémon ball, were arranged on surfaces and tables to guide the viewer's eye
+                                            naturally across the room.
+                                            <br><br>
+                                            -Smaller objects, including the Rubriks cube and
+                                            the Ninetedo playboy, were placed strategically to add detail, interest, and
+                                            a sense of playfulness without cluttering the scene.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model3.png" alt="3d books and plants on two shelfs">
+                                    <div class="slide-overlay">
+                                        <p>The bookshelves in the room were carefully designed to appear realistic and
+                                            lived-in. They are filled with books and miscellaneous items, such as
+                                            storage boxes, a small alarm clock and plants, arranged at slightly varied
+                                            angles to
+                                            avoid uniformity and create a natural, organic look. Some books lean against
+                                            others, while a few are stacked horizontally to break monotony, adding
+                                            subtle visual interest.
+                                            <br><br>
+                                            The shelves were positioned to complement the room's layout, aligning with
+                                            walls and light sources to enhance depth and perspective. Shadows cast by
+                                            the books and objects reinforce their three-dimensionality, while subtle
+                                            rotations and offsets give the impression that the room has been used,
+                                            making the scene feel more immersive and believable.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model5.png" alt="UV-Map screenshot of Pokémon ball">
+                                    <div class="slide-overlay">
+                                        <p>The Pokémon Ball was modelled entirely from scratch using Blender. I began by
+                                            creating a perfect sphere as the base and then carefully divided it into two
+                                            hemispheres to replicate the iconic red and white design. A thin black ring
+                                            was added around the equator to separate the halves, and a small circular
+                                            button was created on the front to match the classic Pokémon Ball features.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="slide">
+                                    <img src="3d/3d_model6.png" alt="ceramic vase and cups pre-render image">
+                                    <div class="slide-overlay">
+                                        <p>The ceramic vase and cups were placed on a circular marble table to introduce
+                                            contrast in both material and form. The smooth, slightly glossy ceramic
+                                            surfaces were designed to reflect light subtly, differentiating them from
+                                            the harder, more reflective marble tabletop. This contrast helps emphasize
+                                            material realism and adds visual depth to the scene.
+                                            <br><br>
+                                            Their placement was carefully considered to feel natural and functional
+                                            rather than staged. The vase acts as a central anchor on the table, while
+                                            the cups are positioned with slight spacing and variation in rotation to
+                                            suggest everyday use. Subtle shadows and reflections were used to ground the
+                                            objects on the marble surface, reinforcing their weight and presence within
+                                            the room and enhancing the overall sense of realism.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model4.png" alt="rendered ceramic vase and cups on marble table">
+                                    <div class="slide-overlay">
+                                        <p>The final render highlights the ceramic vase and cups through carefully
+                                            adjusted lighting, creating a more realistic depiction of their material
+                                            qualities. Soft, directional light was used to produce subtle highlights and
+                                            gentle reflections on the ceramic surfaces, helping to define their
+                                            curvature and smooth finish.
+                                            <br><br>
+                                            The interaction between light and shadow enhances realism by showing slight
+                                            variations in brightness across the objects, rather than a flat appearance.
+                                            Reflections from the marble table further reinforce the material contrast,
+                                            allowing the ceramics to feel grounded within the scene and visually
+                                            integrated into the overall lighting environment.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model7.png" alt="Pac Man Arcade set">
+                                    <div class="slide-overlay">
+                                        <p>
+                                            The Pac-Man arcade set was modelled from scratch in Blender and designed to
+                                            act as a focal point within the TV room. Its recognizable shape and scale
+                                            help anchor the scene, while the proportions were carefully adjusted to
+                                            maintain realism and visual balance within the environment. The cabinet was
+                                            constructed using clean geometry, with attention given to sharp edges, panel
+                                            separation, and overall structure.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model9.png" alt="Ninetedo playboy">
+                                    <div class="slide-overlay">
+                                        <p>
+                                            The Nintendo Playboy was modelled and placed on the leather sofa to add
+                                            character and a sense of personality to the room. Its positioning was
+                                            carefully considered, resting at a slight angle on the cushions to avoid a
+                                            rigid or artificial look. This placement helps suggest casual use,
+                                            reinforcing the idea of the space being lived in rather than staged.
+                                            <br><br>
+                                            Material contrast was an important factor in this detail. The smooth, flat
+                                            surface of the Nintendo Playboy contrasts with the textured leather material
+                                            of the sofa, while subtle shadows and surface contact help ground the object
+                                            realistically. Lighting was used to softly highlight the edges and surface,
+                                            allowing it to integrate naturally into the scene while contributing to the
+                                            overall narrative and realism of the environment.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model10.png" alt="Render of Ninetendo Playboy">
+                                    <div class="slide-overlay">
+                                        <p>
+                                            This render focuses on the Nintendo Playboy with an illuminated green screen
+                                            to enhance realism and visual interest. Emissive lighting was applied to the
+                                            screen to simulate a powered-on device, casting a subtle green glow onto the
+                                            surrounding surface of the console and the leather sofa beneath it.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model11.png" alt="Ninetedo Switch and Rubriks cube">
+                                    <div class="slide-overlay">
+                                        <p>
+                                            The Nintendo Switch and Rubik's Cube were placed on the marble table to
+                                            introduce variation in scale, color, and material. Their placement was
+                                            carefully balanced to avoid clutter, with slight spacing and angled
+                                            positioning to create a natural, everyday arrangement rather than a
+                                            perfectly aligned setup.
+                                            <br><br>
+                                            Material contrast plays a key role in this composition. The smooth,
+                                            semi-matte surfaces of the Nintendo Switch contrast with the glossy,
+                                            patterned finish of the Rubik's Cube, while both objects stand out against
+                                            the reflective marble tabletop. Subtle reflections and shadows help ground
+                                            the objects, reinforcing their weight and presence while contributing to a
+                                            realistic and visually engaging scene.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="3d/3d_model1.PNG" alt="Room again without overlay text">
+                                </div>
+
+                            </div>
+
+                            <button class="slide-btn1 next">❯</button>
+                        </div>
+
+                        <p class="hover-hint">(Hover over image to see text description)</p>
+                    </div>
+
+                </div>
+
+                <div class="glass-tab light-tab modelling-tab1">
+                    <h1 class="virtial-title">Virual Field Trip Assignment</h1>
+                    <div class="modelling-content">
+                        <div class="modelling-text">
+                            <p>
+                                This virtual field trip assignment focused on recreating a well-known Dublin landmark
+                                using photogrammetry and 3D workflows. I selected <strong>Luke Kelly's head
+                                    statue</strong>, a tribute to
+                                one of Ireland's most influential folk musicians and a founding member of The Dubliners.
+                                Luke Kelly is remembered for his powerful voice, political activism, and lasting impact
+                                on Irish music and culture.
+                                <br><br>
+                                Using <strong>Meshroom</strong>, the statue was reconstructed from photographic data to
+                                generate a
+                                detailed 3D scan. The model was then cleaned and refined in <strong>Blender</strong>,
+                                where issues such
+                                as mesh errors, noise, and surface imperfections were corrected. Finally, the finished
+                                model was uploaded to <strong>Sketchfab</strong> to create an interactive, web-based 3D
+                                experience,
+                                allowing the piece to be explored digitally while preserving an important part of
+                                Dublin’s cultural heritage.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Luke Kelly's Head</h1>
+                        <h3>Video Clip</h3>
+                        <p>
+                            The camera spin video presents the rendered 3D model of Luke Kelly's head after
+                            reconstruction, allowing the form and surface details to be viewed from all angles. This
+                            movement highlights the cleaned geometry and refined textures achieved during the Blender
+                            post-processing stage. The rotating camera clip also enhances the presentation by creating a
+                            smooth, professional showcase of the final photogrammetry model.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider"></div>
+
+                    <div class="tab-right">
+                        <video controls>
+                            <source src="virtual/lukeKelly.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="glass-tab dark-tab">
+                    <div class="tab-left">
+                        <h1>Luke Kelly's Head</h1>
+                        <h3>Sketchfab Render</h3>
+                        <p>
+                            The Sketchfab render presents the final Luke Kelly head model as an interactive 3D asset,
+                            allowing viewers to explore the sculpture from any angle in real time. The platform’s
+                            lighting and shading tools were used to enhance surface detail and depth, showcasing the
+                            cleaned geometry and textures refined in Blender. This interactive presentation helps bridge
+                            physical heritage and digital preservation, making the landmark accessible in an engaging
+                            online format.
+                            <br><br>
+                            Unfortunately, due to time constraints, the material maps could not be consolidated into a
+                            single UV layout, so they did not transfer correctly to Sketchfab. As a result, only the
+                            base geometry and default shading are visible in the interactive model, rather than the
+                            fully textured version created in Blender.
+                        </p>
+                    </div>
+
+                    <div class="tab-divider"></div>
+                    <div class="tab-right">
+                        <div class="sketchfab-embed-wrapper">
+                            <iframe title="luke kelly head" frameborder="0" allowfullscreen
+                                allow="autoplay; fullscreen; xr-spatial-tracking"
+                                src="https://sketchfab.com/models/ea8abf2ad21a4b1eb87f22bc6e89eb03/embed">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="glass-tab dark-tab slideshow-tab">
+
+                    <div class="dark-tab-content">
+
+                        <div class="slideshow-wrapper">
+                            <button class="slide-btn1 prev">❮</button>
+
+                            <div class="slideshow">
+
+                                <div class="slide active">
+                                    <img src="virtual/lukeKelly1.jpg" alt="3D Model 1">
+                                    <div class="slide-overlay">
+                                        <p>After transferring the Luke Kelly model from Meshroom to Blender, the skin
+                                            had numerous holes and some areas of hair were missing. These gaps were
+                                            corrected by duplicating sections of hair textures and carefully readjusting
+                                            parts of the head to restore the overall form. The skin and surface details
+                                            were refined using Blender's healing, inflating, and smudging brushes,
+                                            ensuring a smooth, realistic appearance while maintaining the integrity of
+                                            the original scan.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly2.jpg" alt="3D Model 2">
+                                    <div class="slide-overlay">
+                                        <p>The UV map revealed areas where the skin particles and segmented geometry
+                                            were duplicated and merged to fill gaps in the model. These cloned sections
+                                            had to be carefully reconstructed and adjusted to ensure continuity and
+                                            natural flow, preserving the overall shape and realism of Luke Kelly's head.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--No more text overlay needed-->
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly4.jpg" alt="3D Model 3">
+                                </div>
+
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly5.jpg" alt="3D Model 3">
+
+                                </div>
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly6.jpeg" alt="3D Model 3">
+
+                                </div>
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly7.jpeg" alt="3D Model 3">
+
+                                </div>
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly9.jpeg" alt="3D Model 3">
+
+                                </div>
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly10.jpeg" alt="3D Model 3">
+
+                                </div>
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly11.jpg" alt="3D Model 3">
+
+                                </div>
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly12.jpg" alt="3D Model 3">
+
+                                </div>
+
+                                <div class="slide">
+                                    <img src="virtual/lukeKelly13.jpg" alt="3D Model 3">
+
+                                </div>
+                            </div>
+
+                            <button class="slide-btn1 next">❯</button>
+                        </div>
+
+                        <p class="hover-hint">(Hover over image to see text description)</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+                © Robyn Quigley's Portfolio
+            </footer>
+
+        </main>
+        <!-- slideshow HTML above -->
+        <script>
+            document.querySelectorAll('.slideshow-wrapper').forEach(wrapper => {
+                const slides = wrapper.querySelectorAll('.slide');
+                const prevBtn = wrapper.querySelector('.slide-btn1.prev');
+                const nextBtn = wrapper.querySelector('.slide-btn1.next');
+
+                let currentIndex = 0;
+
+                function showSlide(index) {
+                    slides.forEach(slide => slide.classList.remove('active'));
+                    slides[index].classList.add('active');
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        showSlide(currentIndex);
+                    }
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    if (currentIndex < slides.length - 1) {
+                        currentIndex++;
+                        showSlide(currentIndex);
+                    }
+                });
+            });
+        </script>
+
+
+
+
+
+</body>
+
+
+</html>

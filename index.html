@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Robyn Quigley's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="hero">
+
+        <button class="menu-toggle">☰</button> <!--make the menu bar animate later Robyn-->
+
+        <!--Nav (side-menu) -->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects &#8609; </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="websiteDesigns.html">Website Designs</a></li>
+
+                        <li><a href="videoDesigns.html">Video Projects</a></li>
+
+                        <li><a href="graphicDesign.html">Graphic Design</a></li>
+
+                        <li><a href="3dModelling.html">3D Modelling</a></li>
+
+                        <li><a href="masterProject.html">Masters Summer Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="cv.pdf" target="_blank">My CV PDF</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sideMenu = document.querySelector('.side-menu');
+
+            menuToggle.addEventListener('click', () => {
+                sideMenu.classList.toggle('open');
+            });
+
+            // Dropdown toggle
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    parent.classList.toggle('open');
+                });
+            });
+        </script> <!--need to put this is a seperate JS file later DONT FORGET ROBYN-->
+
+        <div class="hero-text">
+            <h1>Welcome<br>To My Website</h1>
+            <p>
+                My name is <strong>Robyn Quigley!</strong>
+                <br><br>
+                I'm a digital designer with a background in interactive digital media, graphic design, and communication
+                studies. I like to design engaging digital experiences that are both visually compelling and
+                user-friendly.
+                <br><br>
+                Take a look around to explore my work across different website designs, video projects, 3D modelling and
+                much more.
+            </p>
+            <a href="#projects">
+                <button>Explore</button>
+            </a>
+
+            <a href="cv.pdf" target="_blank" class="cv-btn">CV</a>
+
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <!--My project section ( remember to add more later Robyn) -->
+    <section id="projects" class="projects">
+        <div class="projects-wrapper">
+            <div class="project-panel">
+                <div class="project-content">
+                    <h3>Website Designs</h3>
+                    <br><br>
+                    <p class="project-desc">
+                        This page explores different interactive web-based projects I've worked on during my <strong>IDM
+                            Masters.</strong><br>
+                        As a collaborative effort I built dynamic components using JavaScript, React
+                        and CSS animations, focusing on usability, responsiveness, and
+                        performance across desktop devices.
+                    </p>
+                    <button class="view-btn">
+                        <a href="websiteDesigns.html">View</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="project-panel">
+                <div class="project-content">
+                    <h3>Video Projects</h3>
+                    <br><br>
+                    <p class="project-desc">
+                        This page showcases a selection of video-based projects I developed during my <strong>Academic
+                            career.</strong><br><br>
+                        Through both individual, collaborative and personal work, I focused on storytelling, pacing, and
+                        visual
+                        clarity, while using tools such as Adobe Premiere Pro or CapCut.
+                    </p>
+                    <button class="view-btn">
+                        <a href="videoDesigns.html">View</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="project-panel">
+                <div class="project-content">
+                    <h3>Graphic Design</h3>
+                    <br><br>
+                    <p class="project-desc">
+                        This page features a range of graphic design work developed throughout my
+                        <strong>studies.</strong><br>
+                        I focused on translating ideas into strong visual concepts through experimentation with
+                        typography, shapes, colour, and composition. All while using Adobe Photoshop, Illustrator, and
+                        InDesign.
+                    </p>
+                    <button class="view-btn">
+                        <a href="graphicDesign.html">View</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="project-panel">
+                <div class="project-content">
+                    <h3>3D Modelling</h3>
+                    <br><br>
+                    <p class="project-desc">
+                        This page presents a collection of 3D modelling and digital reconstruction projects created
+                        during my <strong>IDM Masters.</strong><br>
+                        Using <strong>Blender</strong> for modelling and rendering, <strong>Meshroom</strong> for
+                        photogrammetry, and <strong>Sketchfab</strong> for interactive presentation. Each project
+                        emphasises experimentation and technical workflow.
+                    </p>
+                    <button class="view-btn">
+                        <a href="3dModelling.html">View</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="project-panel">
+                <div class="project-content">
+                    <h3>Masters summmer <br>project</h3>
+                    <br><br>
+                    <p class="project-desc">
+                        This page presents my <strong>Masters Summer project.</strong><br>
+                        My team and I produced the first Irish Sign Language Museum mobile
+                        web-app for irish deaf individuals to access visual information through ISL
+                        videos and much more. The project is called MUSA=<strong>Mus</strong>eums
+                        For <strong>A</strong>ll
+                    </p>
+                    <button class="view-btn-1">
+                        <a href="mastersProject.html">View</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Education section -->
+    <section class="education">
+        <h2 class="education-title">Education</h2>
+
+        <div class="education-cards">
+
+            <div class="education-card">
+                <div class="edu-image-1">
+                    <img src="education/dcu_logo.png.webp" alt="Dublin City University logo">
+                </div>
+
+                <h3>BSc Communication Studies (Hons)</h3>
+                <p class="edu-school">Dublin City University | 2020 – 2023</p>
+
+                <p class="edu-skills">
+                    <strong>Skills Learned:</strong><br>
+                    Digital Media Production, Video & Audio Production,
+                    Graphic Design and more...
+                </p>
+
+                <a href="https://www.dcu.ie/courses/undergraduate/school-communications/communication-studies"
+                    target="_blank" class="edu-btn">View
+                </a>
+            </div>
+
+            <div class="education-card">
+                <div class="edu-image-2">
+                    <img src="education/ucd_logo.jpg" alt="University College Dublin logo">
+                </div>
+
+                <h3>Professional Diploma in Graphic Design</h3>
+                <p class="edu-school">University College Dublin | 2024</p>
+
+                <p class="edu-skills">
+                    <strong>Skills Learned:</strong><br>
+                    Visual Communication, Adobe Creative Suite,
+                    Typography and more...
+                </p>
+                <a href="https://www.ucd.ie/professionalacademy/findyourcourse/professional-diploma-in-graphic-design/?campaignid=8377180683&adgroupid=179350009432&adid=749507789501&utm_device=c&utm_term=ucd%20graphic%20design&utm_source=google&utm_medium=cpc&utm_campaign=a%26c_SEA_BR_Brand&hsa_cam=8377180683&hsa_grp=179350009432&hsa_mt=e&hsa_src=g&hsa_ad=749507789501&hsa_acc=3944762284&hsa_net=adwords&hsa_kw=ucd%20graphic%20design&hsa_tgt=kwd-2418143958703&hsa_ver=3&gad_source=1&gad_campaignid=8377180683&gbraid=0AAAAACkdHOCnzYBtLohgQ9RkPNcxoFYj0&gclid=Cj0KCQiAyP3KBhD9ARIsAAJLnnZVfepuChVT_jAagJ5iw7DMCtKLkmu6o4yc4PsQbeGPVBKQZDnv0vQaAmx4EALw_wcB"
+                    target="_blank" class="edu-btn">View</a>
+
+            </div>
+
+            <div class="education-card">
+                <div class="edu-image-3">
+                    <img src="education/Trinity-College-Dublin-logo.png" alt="Trinity College Dublin logo">
+                </div>
+
+                <h3>Interactive Digital Media (Distinction)</h3>
+                <p class="edu-school">Trinity College Dublin | 2024 – 2025</p>
+
+                <p class="edu-skills">
+                    <strong>Skills Learned:</strong><br>
+                    Website Design,Programming, 3D Modelling,
+                    Graphic Design and more...
+                </p>
+
+                <a href="https://www.tcd.ie/courses/postgraduate/courses/interactive-digital-media-msc/" target="_blank"
+                    class="edu-btn">View</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="skills">
+        <h2>Personal skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="card-front">Languages</div>
+                <div class="card-back">
+                    <p>English, Irish Sign Language, International Sign Language</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-front">Core Competence</div>
+                <div class="card-back">
+                    <p>Project Management, Team Leader, Problem Solver, Critical Thinker</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-front">Technical Skills</div>
+                <div class="card-back">
+                    <p>HTML, CSS, JavaScript, Blender and More!</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-front">Interests</div>
+                <div class="card-back">
+                    <p>UI/UX Design, Accessiblity, Web Development, 3d Modelling and Markerting</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-front">Hobbies</div>
+                <div class="card-back">
+                    <p>Photography, Traveling, Reading and Painting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="logos container">
+        <h2> Software skills</h2>
+        <div class="marquee">
+            <div class="track">
+                <img src="logos/html.png" alt="HTML" width="128" />
+                <img src="logos/css.png" alt="CSS" width="128" />
+                <img src="logos/javascript.png" alt="JS" width="128" />
+                <img src="logos/blender.png" width="128" alt="Blender" />
+                <img src="logos/vscode.png" width="128" alt="VS Code" />
+                <img src="logos/wordpress.png" width="128" alt="Wordpress" />
+                <img src="logos/illustrator.png" width="128" alt="illustrator" />
+                <img src="logos/indesign.png" alt="indesign" width="128" />
+                <img src="logos/premierePro.png" alt="premierePro" width="128" />
+                <img src="logos/photoshop.png" alt="photoshop" width="128" />
+                <img src="logos/audacity.png" width="128" alt="audacity" />
+                <img src="logos/capcut.png" width="128" alt="capcut" />
+                <img src="logos/figma1.png" width="128" alt="figma" />
+                <img src="logos/canva1.jpeg" width="128" alt="canva" />
+                <img src="logos/excel1.png" width="128" alt="excel spreadsheets" />
+                <img src="logos/github3.png" width="128" alt="github" />
+                <img src="logos/html.png" alt="HTML" width="128" />
+                <img src="logos/css.png" alt="CSS" width="128" />
+                <img src="logos/javascript.png" alt="JS" width="128" />
+                <img src="logos/blender.png" width="128" alt="Blender" />
+                <img src="logos/vscode.png" width="128" alt="VS Code" />
+                <img src="logos/wordpress.png" width="128" alt="Wordpress" />
+                <img src="logos/illustrator.png" width="128" alt="illustrator" />
+                <img src="logos/indesign.png" alt="indesign" width="128" />
+                <img src="logos/premierePro.png" alt="premierePro" width="128" />
+                <img src="logos/photoshop.png" alt="photoshop" width="128" />
+                <img src="logos/audacity.png" width="128" alt="audacity" />
+                <img src="logos/capcut.png" width="128" alt="capcut" />
+                <img src="logos/figma1.png" width="128" alt="figma" />
+                <img src="logos/canva1.jpeg" width="128" alt="canva" />
+                <img src="logos/excel1.png" width="128" alt="excel spreadsheets" />
+                <img src="logos/github3.png" width="128" alt="github" />
+            </div>
+        </div>
+    </section>
+
+    <section class="work-experience container">
+        <h2>
+            <small>Recent</small>
+            Work Experience
+        </h2>
+        <div class="jobs">
+            <article>
+                <figure>
+                    <div>
+                        <img src="work/siro1.jpg" alt="Workplace 1 - siro broadband company" width="100%" />
+                        <figcaption>
+                            Siro Broadband Provider
+                        </figcaption>
+                    </div>
+                </figure>
+                <h3>SIRO-Admististator</h3>
+                <div>2017: 3 Months</div>
+                <p>Managed daily operations, coordinates resources and ensures smooth organizational functioning.
+                </p>
+            </article>
+            <article>
+                <figure>
+                    <div>
+                        <img src="work/siro.jpg" alt="Workplace 2 - Siro broadband company" width="100%" />
+                        <figcaption>
+                            SIRO Broadband Provider
+                        </figcaption>
+                    </div>
+                </figure>
+                <h3>SIRO-Internship</h3>
+                <div>2019: 4 months</div>
+                <p>Worked closely with the communications department and marketing team to provide video and branding
+                    content across different platforms.</p>
+            </article>
+            <article>
+                <figure>
+                    <div>
+                        <img src="work/killiney_golf.jpg" alt="Workplace 3 - killiney golf Club" width="100%" />
+                        <figcaption>
+                            Killiney Golf Club
+                        </figcaption>
+                    </div>
+                </figure>
+                <h3>Bartender & Waitress</h3>
+                <div>2023: 4 months </div>
+                <p>At the golf club I provided professional beverage service while ensuring a welcoming, high-quality
+                    experience for members and guests.</p>
+            </article>
+            <article>
+                <figure>
+                    <div>
+                        <img src="work/golf.jpg" alt="Workplace 4 - killiney golf club course" width="100%" />
+                        <figcaption>
+                            Killiney Golf Club
+                        </figcaption>
+                    </div>
+                </figure>
+                <h3>Graphic Designer</h3>
+                <div>2024: 4 months </div>
+                <p>At the Killiney golf club I created fun poster graphics for different events and organisations for a
+                    duration of time. </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!--Contact me section  -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <br>
+        <div class="contact-card">
+            <div class="contact-photo">
+                <img src="assets/robyn.jpg" alt="Robyn">
+            </div>
+
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/robynquigley/" target="_blank">
+                    <div>
+                        <i class="fa fa-linkedin-square"></i>
+                    </div>
+                </a>
+
+                <a href="mailto:Quigleyrobyn@gmail.com">
+                    <div>
+                        <i class="fa fa-envelope-open"></i>
+                    </div>
+                </a>
+
+                <a href="#" target="phone number">
+                    <div>
+                        <i class="fa fa-comment"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        © Robyn Quigley's Portfolio
+    </footer>
+
+</body>
+
+</html>
