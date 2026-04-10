@@ -37,9 +37,10 @@ h3 {
     gap: 140px;
 }
 
+
 .hero strong {
     color: rgb(0, 63, 102);
-    font-size: 2.3rem;
+    font-size: 2.5rem;
 }
 
 /*menu bar*/
@@ -224,7 +225,7 @@ h3 {
     padding: 12px 28px;
     border-radius: 50px;
     border: none;
-    background: #003f66;
+    background: rgb(0, 63, 102);
     color: white;
     cursor: pointer;
     transition: transform 0.25s ease;
@@ -468,9 +469,10 @@ h3 {
     font-size: 64px;
     line-height: 1;
     margin-top: -60px;
-    margin-bottom: 85px;
+    margin-bottom: 8px;
     text-align: center;
     color: var(--base-800);
+
     color: white;
 }
 
@@ -876,13 +878,19 @@ footer {
     opacity: 0.6;
 }
 
-/* MOBILE STYLES ONLY */
+/* =========================
+   MOBILE STYLES ONLY
+   ========================= */
 @media (max-width: 768px) {
 
     /* GENERAL SPACING */
     section {
         padding: 60px 20px;
     }
+
+    /* =========================
+   HERO (MOBILE ONLY - FINAL)
+   ========================= */
 
     .hero {
         flex-direction: column;
@@ -922,6 +930,9 @@ footer {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
 
+    /* =========================
+   BUTTON ROW (Explore + CV)
+   ========================= */
 
     .hero-text {
         display: flex;
@@ -1006,7 +1017,7 @@ footer {
         margin-bottom: 15px;
     }
 
-   
+    /* CONTENT */
     .project-content {
         position: static;
         transform: none;
@@ -1019,6 +1030,7 @@ footer {
         display: none;
     }
 
+    /* BUTTON */
     .view-btn,
     .view-btn-1 {
         position: static;
@@ -1028,6 +1040,9 @@ footer {
         padding: 8px 18px;
     }
 
+    /* =========================
+   MASTER PROJECT BUTTON FIX (MOBILE)
+   ========================= */
 
     .project-panel .view-btn-1 {
         opacity: 1 !important;
@@ -1043,6 +1058,9 @@ footer {
         text-decoration: none;
     }
 
+    /* =========================
+       EDUCATION
+       ========================= */
     .education-cards {
         grid-template-columns: 1fr;
     }
@@ -1051,79 +1069,39 @@ footer {
         font-size: 2.2rem;
     }
 
-/* =========================
-   SKILLS SECTION (MOBILE ONLY)
-   TAP TO SHOW/HIDE CONTENT (NO FLIP)
-   ========================= */
+    /* =========================
+       SKILLS
+       ========================= */
+    .skills {
+        padding: 80px 20px;
+    }
 
-/* layout */
-.skills {
-    padding: 80px 20px;
-}
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
 
-/* stack cards vertically */
-.skills-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
+    .skill-card {
+        width: 140px;
+        height: 140px;
+    }
 
-/* =========================
-   DISABLE DESKTOP HOVER ON MOBILE
-   ========================= */
-.skill-card:hover .card-front,
-.skill-card:hover .card-back {
-    transform: none !important;
-}
+    .skill-card:last-child {
+        grid-column: span 2;
+        justify-self: center;
+    }
 
-/* =========================
-   CARD BASE
-   ========================= */
-.skill-card {
-    position: relative;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* smooth transition for both sides */
-.skill-card .card-front,
-.skill-card .card-back {
-    transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-/* =========================
-   DEFAULT STATE (SHOW FRONT ONLY)
-   ========================= */
-.skill-card .card-front {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.skill-card .card-back {
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
-}
-
-/* =========================
-   TAP STATE (MOBILE)
-   ========================= */
-.skill-card:focus-within .card-front {
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-.skill-card:focus-within .card-back {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
+    /* =========================
+       LOGOS
+       ========================= */
     .logos h2 {
         font-size: 2rem;
     }
 
-  
+    /* =========================
+       WORK EXPERIENCE
+       ========================= */
     .jobs {
         flex-direction: column !important;
     }
@@ -1131,6 +1109,10 @@ footer {
     h2 {
         font-size: 2.2rem;
     }
+
+    /* =========================
+       CONTACT
+       ========================= */
     .contact-card {
         flex-direction: column;
         padding: 40px 20px;
@@ -1146,6 +1128,10 @@ footer {
         width: 60px;
         height: 60px;
     }
+
+    /* =========================
+       FOOTER
+       ========================= */
     footer {
         font-size: 0.75rem;
     }
