@@ -1051,9 +1051,9 @@ footer {
         font-size: 2.2rem;
     }
 
- /* =========================
+/* =========================
    SKILLS SECTION (MOBILE ONLY)
-   TAP-TO-FEEL FLIP + DISABLE HOVER
+   TAP TO SHOW/HIDE CONTENT (NO FLIP)
    ========================= */
 
 /* layout */
@@ -1061,60 +1061,62 @@ footer {
     padding: 80px 20px;
 }
 
-/* stack cards nicely */
+/* stack cards vertically */
 .skills-grid {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 /* =========================
-   DISABLE DESKTOP HOVER EFFECT
+   DISABLE DESKTOP HOVER ON MOBILE
    ========================= */
 .skill-card:hover .card-front,
 .skill-card:hover .card-back {
-    transform: none;
+    transform: none !important;
 }
 
 /* =========================
-   BASE CARD FIXES FOR MOBILE
+   CARD BASE
    ========================= */
 .skill-card {
     position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* ensure smooth flipping still works */
-.skill-card div {
-    backface-visibility: hidden;
-    transition: transform 0.6s;
+/* smooth transition for both sides */
+.skill-card .card-front,
+.skill-card .card-back {
+    transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 /* =========================
-   MOBILE TAP EFFECT
+   DEFAULT STATE (SHOW FRONT ONLY)
    ========================= */
-/* tap = active state */
-.skill-card:active .card-front {
-    transform: rotateY(180deg);
+.skill-card .card-front {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.skill-card:active .card-back {
-    transform: rotateY(360deg);
+.skill-card .card-back {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
 }
 
-/* fallback for some mobile browsers */
+/* =========================
+   TAP STATE (MOBILE)
+   ========================= */
 .skill-card:focus-within .card-front {
-    transform: rotateY(180deg);
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .skill-card:focus-within .card-back {
-    transform: rotateY(360deg);
-}
-
-/* =========================
-   OPTIONAL: make cards easier to tap
-   ========================= */
-.skill-card {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
     .logos h2 {
