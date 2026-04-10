@@ -875,3 +875,220 @@ footer {
     font-size: 0.85rem;
     opacity: 0.6;
 }
+
+/* MOBILE STYLES ONLY */
+@media (max-width: 768px) {
+
+    /* GENERAL SPACING */
+    section {
+        padding: 60px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    /* HERO TEXT */
+    .hero-text {
+        max-width: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    /* HERO IMAGE (CIRCLE) */
+    .hero-image {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        margin: 10px 0 20px 0;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* BUTTON WRAPPER BEHAVIOUR */
+    .hero-text a {
+        display: inline-block;
+        margin: 0;
+    }
+
+    /* SIDE-BY-SIDE BUTTONS */
+    .hero-text a:nth-of-type(1),
+    .hero-text a.cv-btn {
+        margin: 10px 6px;
+    }
+
+    /* FORCE BUTTONS TO SIT INLINE */
+    .hero-text {
+        gap: 10px;
+    }
+
+    /* CV BUTTON CONSISTENCY */
+    .cv-btn {
+        display: inline-block;
+    }
+
+    .side-menu {
+        width: 100%;
+        left: -100%;
+    }
+
+    .side-menu.open {
+        left: 0;
+    }
+
+    .projects {
+        height: auto;
+        overflow: visible;
+        background: linear-gradient(to bottom, #000, #0f6f8a);
+        padding: 60px 20px;
+    }
+
+    .projects-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-panel {
+        transform: none;
+        margin-left: 0;
+        background: #e6e6e6;
+        border-radius: 25px;
+        padding: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        height: auto;
+        display: block;
+    }
+
+    .project-panel:hover {
+        transform: none;
+        flex: unset;
+    }
+
+    .project-panel::before {
+        display: none;
+    }
+
+    /* IMAGE SECTION (keeps background image visible) */
+    .project-panel:nth-child(1),
+    .project-panel:nth-child(2),
+    .project-panel:nth-child(3),
+    .project-panel:nth-child(4),
+    .project-panel:nth-child(5) {
+        height: 180px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 15px;
+    }
+
+   
+    .project-content {
+        position: static;
+        transform: none;
+        text-align: center;
+        padding: 0;
+        color: rgb(255, 255, 255);
+    }
+
+    .project-desc {
+        display: none;
+    }
+
+    .view-btn,
+    .view-btn-1 {
+        position: static;
+        margin-top: 10px;
+        background-color: #002a8f;
+        border-radius: 20px;
+        padding: 8px 18px;
+    }
+
+
+    .project-panel .view-btn-1 {
+        opacity: 1 !important;
+        transform: none !important;
+        display: inline-block !important;
+        position: static !important;
+        margin-top: 10px;
+    }
+
+    .view-btn a,
+    .view-btn-1 a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .education-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .education-title {
+        font-size: 2.2rem;
+    }
+
+    .skills {
+        padding: 80px 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+ 
+    .logos h2 {
+        font-size: 2rem;
+    }
+
+  
+    .jobs {
+        flex-direction: column !important;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+    .contact-card {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .contact-icons {
+        padding-left: 0;
+        gap: 30px;
+    }
+
+    .contact-icons div {
+        width: 60px;
+        height: 60px;
+    }
+    footer {
+        font-size: 0.75rem;
+    }
+}
