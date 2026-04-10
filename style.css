@@ -467,10 +467,11 @@ h3 {
 .education-title {
     font-size: 64px;
     line-height: 1;
-    margin-bottom: 10px;
+    margin-top: -60px;
+    margin-bottom: 85px;
     text-align: center;
     color: var(--base-800);
-    padding: 30px;
+
     color: white;
 }
 
