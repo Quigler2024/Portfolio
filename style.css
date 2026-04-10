@@ -1051,14 +1051,71 @@ footer {
         font-size: 2.2rem;
     }
 
-    .skills {
-        padding: 80px 20px;
-    }
+ /* =========================
+   SKILLS SECTION (MOBILE ONLY)
+   TAP-TO-FEEL FLIP + DISABLE HOVER
+   ========================= */
 
-    .skills-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+/* layout */
+.skills {
+    padding: 80px 20px;
+}
+
+/* stack cards nicely */
+.skills-grid {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   DISABLE DESKTOP HOVER EFFECT
+   ========================= */
+.skill-card:hover .card-front,
+.skill-card:hover .card-back {
+    transform: none;
+}
+
+/* =========================
+   BASE CARD FIXES FOR MOBILE
+   ========================= */
+.skill-card {
+    position: relative;
+}
+
+/* ensure smooth flipping still works */
+.skill-card div {
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+/* =========================
+   MOBILE TAP EFFECT
+   ========================= */
+/* tap = active state */
+.skill-card:active .card-front {
+    transform: rotateY(180deg);
+}
+
+.skill-card:active .card-back {
+    transform: rotateY(360deg);
+}
+
+/* fallback for some mobile browsers */
+.skill-card:focus-within .card-front {
+    transform: rotateY(180deg);
+}
+
+.skill-card:focus-within .card-back {
+    transform: rotateY(360deg);
+}
+
+/* =========================
+   OPTIONAL: make cards easier to tap
+   ========================= */
+.skill-card {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
 
  
     .logos h2 {
