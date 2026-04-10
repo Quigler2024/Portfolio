@@ -38,7 +38,8 @@ h3 {
 }
 
 .hero strong {
-    color: #023554;
+    color: rgb(0, 63, 102);
+    font-size: 3rem;
 }
 
 /*menu bar*/
@@ -94,7 +95,6 @@ h3 {
     text-decoration: underline;
 
 }
-
 
 /* Menu open */
 .side-menu.open {
@@ -217,7 +217,7 @@ h3 {
 .hero-text p {
     line-height: 1.6;
     margin-bottom: 30px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .hero-text button {
