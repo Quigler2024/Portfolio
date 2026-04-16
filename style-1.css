@@ -880,3 +880,158 @@ footer {
     font-size: 0.85rem;
     opacity: 0.6;
 }
+
+/* 
+   MOBILE RESPONSIVE code section
+   (does not change desktop)
+ */
+
+@media (max-width: 768px) {
+
+    /* General spacing */
+    .project-page {
+        padding: 20px 10px;
+    }
+
+    /* Intro card */
+    .project-intro-card {
+        padding: 25px 20px;
+        margin: 0 10px;
+    }
+
+    .project-intro-card h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Tabs */
+    .project-tabs {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .tab-btn {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* Mockups */
+    .project-mockups {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mockup-card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Showcase */
+    .project-showcase {
+        flex-direction: column;
+    }
+
+    .showcase-content {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .showcase-content img {
+        width: 100%;
+    }
+
+    /* Video section */
+    .project-video.dark-glass {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    /* Video projects tabs */
+    .glass-tab,
+    .light-tab,
+    .dark-tab {
+        padding: 25px;
+    }
+
+    .tab-left h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    /* Social section */
+    .social-media-section {
+        margin-top: 0;
+    }
+
+    .social-slider {
+        padding: 20px;
+    }
+
+    .social-track {
+        gap: 15px;
+    }
+
+    .social-track video {
+        width: 200px;
+        height: 320px;
+    }
+
+    .social-track p {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Modelling */
+    .modelling-tab,
+    .modelling-tab1 {
+        padding: 20px;
+    }
+
+    /* Slideshow */
+    .slideshow {
+        height: 300px;
+    }
+
+    /* Buttons reposition */
+    .slide-btn.prev,
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .slide-btn.next,
+    .gallery-next {
+        right: 10px;
+    }
+
+    /* Pitch iframe */
+    .pitch-embed {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .pitch-embed iframe {
+        height: 300px;
+    }
+
+    /* Dark tab margins fix */
+    .dark-tab1 {
+        margin: 20px;
+        padding: 25px;
+        flex-direction: column;
+    }
+
+    /* Text scaling */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
