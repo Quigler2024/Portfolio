@@ -236,21 +236,28 @@
         </div>
     </section>
 
-    <!-- Skills section -->
+     <!-- Skills section -->
     <section id="skills" class="skills">
         <h2>Personal skills</h2>
 
         <div class="skills-grid">
-            
-      <div class="skill-card">
-                <div class="card-front">Languages</div>
+            <div class="skill-card">
+                <div class="card-front">Languages
+                    <button class="flip-btn front-btn">
+                        <i class="fa fa-refresh"></i>
+                    </button>
+                </div>
                 <div class="card-back">
                     <p>English, Irish Sign Language, International Sign Language</p>
                 </div>
+
             </div>
 
             <div class="skill-card">
                 <div class="card-front">Core Competence</div>
+                <button class="flip-btn front-btn">
+                    <i class="fa fa-refresh"></i>
+                </button>
                 <div class="card-back">
                     <p>Project Management, Team Leader, Problem Solver, Critical Thinker</p>
                 </div>
@@ -258,6 +265,9 @@
 
             <div class="skill-card">
                 <div class="card-front">Technical Skills</div>
+                <button class="flip-btn front-btn">
+                    <i class="fa fa-refresh"></i>
+                </button>
                 <div class="card-back">
                     <p>HTML, CSS, JavaScript, Blender and More!</p>
                 </div>
@@ -265,19 +275,33 @@
 
             <div class="skill-card">
                 <div class="card-front">Interests</div>
+                <button class="flip-btn front-btn">
+                    <i class="fa fa-refresh"></i>
+                </button>
                 <div class="card-back">
-                    <p>UI/UX Design, Accessiblity, Web Development, 3d Modelling and Marketing</p>
+                    <p>UI/UX Design, Accessiblity, Web Development, 3d Modelling and Markerting</p>
                 </div>
             </div>
 
             <div class="skill-card">
                 <div class="card-front">Hobbies</div>
+                <button class="flip-btn front-btn">
+                    <i class="fa fa-refresh"></i>
+                </button>
                 <div class="card-back">
-                    <p>Photography, Traveling, Reading, GAA and Painting</p>
+                    <p>Photography, Traveling, Reading and Painting</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll(".flip-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                this.closest(".skill-card").classList.toggle("flipped");
+            });
+        });
+    </script>
 
 
     <section class="logos container">
